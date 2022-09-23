@@ -1,0 +1,1 @@
+import num2words; from ru_word2number import w2n; import re; print(num2words.num2words(eval(''.join([str(w2n.word_to_num(s)) if s not in "+-*" else s for s in re.split(r'(\+|\-|\*)+', input().replace("плюс", "+").replace("минус", "-").replace("умножить на", "*"))])), lang='rus'))
